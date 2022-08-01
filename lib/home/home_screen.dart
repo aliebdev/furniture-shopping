@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:furniture_shopping/home/product_detail_screen.dart';
 
 import '../models/item_model.dart';
 import '../theme/app_spacings.dart';
@@ -52,69 +53,80 @@ class HomeScreen extends StatelessWidget {
                     itemCount: ItemModel.items.length,
                     itemBuilder: (BuildContext context, int index) {
                       final item = ItemModel.items[index];
-                      return Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.shade300,
-                              blurRadius: 10,
+                      return InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            CupertinoPageRoute(
+                              builder: (_) =>
+                                  ProductDetailScreen(itemModel: item),
                             ),
-                          ],
-                          borderRadius: BorderRadius.circular(AppSpacings.l),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: [
-                            Expanded(
-                              flex: 6,
-                              child: ClipRRect(
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(AppSpacings.l),
-                                  topRight: Radius.circular(AppSpacings.l),
-                                ),
-                                child: Image.network(
-                                  item.images.first,
-                                  fit: BoxFit.cover,
+                          );
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.shade300,
+                                blurRadius: 10,
+                              ),
+                            ],
+                            borderRadius: BorderRadius.circular(AppSpacings.l),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              Expanded(
+                                flex: 6,
+                                child: ClipRRect(
+                                  borderRadius: const BorderRadius.only(
+                                    topLeft: Radius.circular(AppSpacings.l),
+                                    topRight: Radius.circular(AppSpacings.l),
+                                  ),
+                                  child: Image.network(
+                                    item.images.first,
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               ),
-                            ),
-                            Expanded(
-                              flex: 2,
-                              child: Container(
-                                padding: const EdgeInsets.all(AppSpacings.l),
-                                child: Column(
-                                  children: [
-                                    Expanded(
-                                      child: Text(
-                                        item.title,
-                                        textAlign: TextAlign.center,
+                              Expanded(
+                                flex: 2,
+                                child: Container(
+                                  padding: const EdgeInsets.all(AppSpacings.l),
+                                  child: Column(
+                                    children: [
+                                      Expanded(
+                                        child: Text(
+                                          item.title,
+                                          textAlign: TextAlign.center,
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .titleMedium!
+                                              .copyWith(
+                                                color: AppColors.black,
+                                                fontWeight: FontWeight.bold,
+                                                overflow: TextOverflow.ellipsis,
+                                                fontSize: 15,
+                                              ),
+                                        ),
+                                      ),
+                                      Text(
+                                        item.price,
                                         style: Theme.of(context)
                                             .textTheme
-                                            .titleMedium!
+                                            .titleSmall!
                                             .copyWith(
-                                              color: AppColors.black,
+                                              color: AppColors.red,
                                               fontWeight: FontWeight.bold,
-                                              overflow: TextOverflow.ellipsis,
-                                              fontSize: 15,
                                             ),
                                       ),
-                                    ),
-                                    Text(
-                                      item.price,
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .titleSmall!
-                                          .copyWith(
-                                            color: AppColors.red,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       );
                     },
