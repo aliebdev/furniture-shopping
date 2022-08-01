@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -72,7 +73,7 @@ class HomeScreen extends StatelessWidget {
                                   topLeft: Radius.circular(AppSpacings.l),
                                   topRight: Radius.circular(AppSpacings.l),
                                 ),
-                                child: Image.asset(
+                                child: Image.network(
                                   item.images.first,
                                   fit: BoxFit.cover,
                                 ),
