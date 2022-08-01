@@ -73,7 +73,7 @@ class HomeScreen extends StatelessWidget {
                                   topRight: Radius.circular(AppSpacings.l),
                                 ),
                                 child: Image.asset(
-                                  item.image,
+                                  item.images.first,
                                   fit: BoxFit.cover,
                                 ),
                               ),
