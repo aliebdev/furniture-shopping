@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_shopping/home/widgets/product_detail_header.dart';
-import 'package:furniture_shopping/models/item_model.dart';
-import 'package:furniture_shopping/theme/app_spacings.dart';
-import 'package:furniture_shopping/theme/colors.dart';
+
+import '../models/item_model.dart';
+import '../theme/app_spacings.dart';
+import '../theme/colors.dart';
+import 'widgets/product_detail_header.dart';
 
 class ProductDetailScreen extends StatelessWidget {
   const ProductDetailScreen({Key? key, required this.itemModel})
