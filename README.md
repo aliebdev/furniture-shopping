@@ -1,16 +1,17 @@
-# furniture_shopping
+# Furniture Shopping
 
-A new Flutter project.
+[YouTube Tutorial - Home Screen - Part 1](https://youtu.be/NzPpwW34FKQ)
 
-## Getting Started
+[YouTube Tutorial - Product Detail Screen - Part 2](https://youtu.be/MeYNBesbsn4)
 
-This project is a starting point for a Flutter application.
+## Learn
+- ✅ Nice image selection
+- ✅ Gradient Color
+- ✅ Container with Border
 
-A few resources to get you started if this is your first Flutter project:
+![Github_Cover-01](https://user-images.githubusercontent.com/71545849/186173937-a2ac02a8-eac0-47f8-9e93-78152964d4e0.jpg)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Social Media
+- YouTube: https://www.youtube.com/channel/UC6R_x8SzUZrtPiFSsGOPiQQ
+- Instagram: https://www.instagram.com/eb.app/
+- LinkedIn: https://www.linkedin.com/in/ali-ebadi-dev/
